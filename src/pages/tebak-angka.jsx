@@ -57,14 +57,14 @@ function TebakAngka() {
         <div>
           <h1 className="text-xl font-medium">Tebak Angka</h1>
         </div>
-        <div className="flex flex-col gap-2 w-1/3">
-          <label className="ms-6">Enter your guess (0 - 200) :</label>
-          <div className="flex gap-2 justify-center">
+        <div className="flex flex-col gap-2 w-full md:w-1/2 lg:w-1/3">
+          <label>Enter your guess (0 - 200) :</label>
+          <div className="flex gap-2 justify-around w-full">
             <input
               ref={inputRef}
               type="text"
               value={input}
-              className="border border-black rounded-lg px-3"
+              className="border border-black rounded-lg px-3 w-1/2"
               onChange={(e) => setInput(+e.target.value)}
               onKeyPress={(e) => {
                 if (e.key === "Enter") {
@@ -73,14 +73,14 @@ function TebakAngka() {
               }}
             />
             <button
-              className="bg-black text-yellow-400 p-3 rounded-lg text-sm"
+              className="bg-black text-yellow-400 p-3 rounded-lg text-sm grow"
               onClick={() => handleSubmit()}
             >
               Guess
             </button>
             <button
               onClick={handleReset}
-              className="flex flex-col justify-center items-center"
+              className="flex flex-col justify-center items-center "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
